@@ -22,31 +22,5 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         alert('Please fill in all fields.');
     }
 });
-document.getElementById('contact-form').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevent the default form submission
 
-    const formData = new FormData(this);
-    const data = {
-        name: formData.get('name'),
-        email: formData.get('email'),
-        message: formData.get('message')
-    };
-
-    fetch('/send-message', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(data)
-    })
-    .then(response => response.text())
-    .then(result => {
-        alert(result);
-        // Optionally, you can reset the form here
-        document.getElementById('contact-form').reset();
-    })
-    .catch(error => {
-        console.error('Error:', error);
-    });
-});
 

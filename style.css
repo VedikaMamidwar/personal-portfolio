@@ -33,6 +33,11 @@ body {
     animation: slideright 1s ease forwards;
 }
 
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
 .navbar a {
     color: white;
     display: inline-block;
@@ -40,13 +45,49 @@ body {
     margin-left: 25px;
     text-decoration: none;
     font-weight: 500;
-    transition: .3s;
+    transition: color 0.3s;
 }
 
 .navbar a:hover {
     color: cyan;
 }
 
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .header {
+        padding: 15px 3%;
+    }
+
+    .logo {
+        font-size: 20px; /* Adjust logo size for tablets */
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar a {
+        font-size: 18px; /* Adjust font size for links */
+        margin: 10px 0; /* Adjust margin for links */
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .header {
+        padding: 10px 2%;
+    }
+
+    .logo {
+        font-size: 18px; /* Adjust logo size for mobile */
+    }
+
+    .navbar a {
+        font-size: 16px; /* Adjust font size for links */
+        margin: 5px 0; /* Adjust margin for links */
+    }
+}
 
 /* Home section styles */
 .home {
@@ -131,6 +172,70 @@ body {
     box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
 }
 
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .home-content h3 {
+        font-size: 28px;
+    }
+
+    .home-content h1 {
+        font-size: 40px;
+    }
+
+    .home-content p {
+        font-size: 18px;
+    }
+
+    .home-sc1 a {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+    }
+
+    .btn-box {
+        padding: 10px 24px;
+        font-size: 18px;
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .home {
+        padding: 50px 5px 0;
+        height: auto;
+    }
+
+    .home-content h3 {
+        font-size: 24px;
+    }
+
+    .home-content h1 {
+        font-size: 32px;
+    }
+
+    .home-content p {
+        font-size: 16px;
+        margin-bottom: 20px;
+    }
+
+    .home-sc1 {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .home-sc1 a {
+        width: 30px;
+        height: 30px;
+        font-size: 16px;
+    }
+
+    .btn-box {
+        padding: 8px 20px;
+        font-size: 16px;
+    }
+}
+
+
 /*about content start*/
 .about {
     display: flex;
@@ -196,18 +301,54 @@ body {
     color: cyan;
 }
 
+/* Media Query for Tablets */
 @media (max-width: 768px) {
     .about {
         flex-direction: column;
         text-align: center;
+        padding: 30px; /* Adjust padding for smaller screens */
     }
 
-    .about-text {
-        padding-bottom: 2rem;
+    .about-img img {
+        width: 80%; /* Adjust image size for tablets */
+    }
+
+    .about-text h2 {
+        font-size: 40px; /* Adjust heading size for tablets */
+    }
+
+    .about-content {
+        font-size: 20px; /* Adjust text size for tablets */
     }
 
     .btn {
-        margin-right: 0;
+        font-size: 18px; /* Adjust button text size for tablets */
+        padding: 8px 18px; /* Adjust button padding for tablets */
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .about {
+        flex-direction: column;
+        padding: 20px; /* Further reduce padding for mobile screens */
+    }
+
+    .about-img img {
+        width: 100%; /* Make image full-width on mobile */
+    }
+
+    .about-text h2 {
+        font-size: 30px; /* Adjust heading size for mobile */
+    }
+
+    .about-content {
+        font-size: 18px; /* Adjust text size for mobile */
+    }
+
+    .btn {
+        font-size: 16px; /* Adjust button text size for mobile */
+        padding: 8px 15px; /* Adjust button padding for mobile */
     }
 }
 
@@ -231,6 +372,7 @@ body {
 .skills h2 span {
     color: cyan;
 }
+
 .container1 {
     max-width: 1200px;
     margin: 0 auto;
@@ -265,6 +407,57 @@ body {
     color: #666;
 }
 
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .skills h2 {
+        font-size: 40px; /* Adjust heading size for tablets */
+    }
+
+    .container1 {
+        padding: 0 20px; /* Add some padding for better spacing on tablets */
+    }
+
+    .bar i {
+        font-size: 36px; /* Adjust icon size for tablets */
+    }
+
+    .bar .info {
+        font-size: 16px; /* Adjust text size for tablets */
+    }
+
+    .bar .description {
+        font-size: 12px; /* Adjust description size for tablets */
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .skills h2 {
+        font-size: 30px; /* Adjust heading size for mobile */
+    }
+
+    .container1 {
+        padding: 0 10px; /* Further adjust padding for mobile */
+    }
+
+    .bar {
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .bar i {
+        font-size: 28px; /* Adjust icon size for mobile */
+    }
+
+    .bar .info {
+        font-size: 14px; /* Adjust text size for mobile */
+    }
+
+    .bar .description {
+        font-size: 10px; /* Adjust description size for mobile */
+    }
+}
+
+
 /* Projects Section */
 .projects {
     padding: 50px 0;
@@ -276,7 +469,6 @@ body {
     margin-bottom: 20px;
     text-align: center;
 }
-
 
 .services-text h2 span {
     color: cyan;
@@ -343,7 +535,6 @@ body {
     box-shadow: 0 10px 20px rgba(0, 188, 212, 0.5);
 }
 
-
 @keyframes slideright {
     from {
         transform: translateX(-100px);
@@ -391,6 +582,44 @@ body {
         opacity: 1;
     }
 }
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .services-text h2 {
+        font-size: 40px; /* Adjust heading size for tablets */
+    }
+
+    .box {
+        width: 100%; /* Make boxes full width on tablets */
+        max-width: 500px; /* Limit maximum width */
+    }
+
+    .box-container {
+        gap: 20px; /* Adjust gap for tablets */
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .services-text h2 {
+        font-size: 30px; /* Adjust heading size for mobile */
+    }
+
+    .box {
+        width: 100%; /* Make boxes full width on mobile */
+        max-width: 100%; /* Ensure boxes are full width */
+        padding: 15px; /* Adjust padding for mobile */
+    }
+
+    .box .button button {
+        padding: 8px 16px; /* Adjust button size for mobile */
+    }
+
+    .box-container {
+        gap: 10px; /* Adjust gap for mobile */
+    }
+}
+
 /* Contact section styles */
 .contact {
     display: flex;
@@ -489,6 +718,82 @@ body {
     padding: 20px;
     text-align: center;
     background-color: #0f0f38;
+}
+
+/* Media Query for Tablets */
+@media (max-width: 768px) {
+    .contact {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .contact-info,
+    .contact-form {
+        border-right: none; /* Remove border for better layout on smaller screens */
+        border-bottom: 2px solid cyan;
+    }
+
+    .contact-info {
+        text-align: center;
+        padding-bottom: 20px;
+    }
+
+    .contact-form h2 {
+        font-size: 28px; /* Adjust heading size for tablets */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 14px; /* Adjust font size for input fields */
+    }
+
+    .contact-form button {
+        font-size: 16px; /* Adjust button font size */
+    }
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 480px) {
+    .contact {
+        padding: 30px 10px;
+    }
+
+    .contact-info,
+    .contact-form {
+        padding: 10px;
+        min-width: auto; /* Allow elements to be more flexible */
+    }
+
+    .contact-info .contact-title {
+        font-size: 28px; /* Adjust title size for mobile */
+    }
+
+    .contact-info .heading {
+        font-size: 22px; /* Adjust heading size for mobile */
+    }
+
+    .contact-info .paragraph {
+        font-size: 14px; /* Adjust paragraph size for mobile */
+    }
+
+    .contact-form h2 {
+        font-size: 24px; /* Adjust form heading size */
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+        padding: 10px;
+        font-size: 14px; /* Adjust font size for mobile */
+    }
+
+    .contact-form button {
+        padding: 10px;
+        font-size: 16px; /* Adjust button font size for mobile */
+    }
+
+    .social-links a {
+        font-size: 20px; /* Adjust social link size for mobile */
+    }
 }
 
 /* Keyframes for animations */
