@@ -131,11 +131,266 @@ body {
     box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
 }
 
+/*about content start*/
+.about {
+    display: flex;
+    align-items: center;
+    padding: 50px;
+    background: rgb(25, 25, 58);
+    flex-wrap: wrap;
+}
+
+.about-img {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-img img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+    border: 5px solid rgb(30, 30, 62);
+}
+.about-img img:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    font-size: 25px;
+    text-align: center;
+}
+
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: cyan;
+    border-radius: 40px;
+    font-size: 20px;
+    color: black;
+    letter-spacing: 1px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: .3s;
+}
+
+.btn:hover {
+    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
+}
+
+.about-text h2 {
+    font-size: 60px;
+    text-align: center;
+}
+
+.about-text h2 span {
+    color: cyan;
+}
+
+@media (max-width: 768px) {
+    .about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        padding-bottom: 2rem;
+    }
+
+    .btn {
+        margin-right: 0;
+    }
+}
+
+/*skills content start*/
+
+.skills {
+    padding: 50px 0;
+    text-align: center;
+}
+
+.skills-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 60px;
+}
+
+.skills h2 span {
+    color: cyan;
+}
+.container1 {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.technical-bars {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.bar {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.bar i {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.bar .info {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.bar .description {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Projects Section */
+.projects {
+    padding: 50px 0;
+    background-color: #1a1939;
+}
+
+.services-text h2 {
+    font-size: 60px;
+    margin-bottom: 20px;
+    text-align: center;
+}
 
 
+.services-text h2 span {
+    color: cyan;
+}
+
+.services-text h2 .highlight {
+    color: cyan;
+}
+
+.box-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    background-color: #1a1939;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.project-title {
+    color: cyan;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.box p {
+    font-size: 16px;
+    color: #cccccc;
+    margin-bottom: 20px;
+}
+
+.box .button {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.box .button button {
+    padding: 10px 20px;
+    background-color: cyan;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.box .button button:hover {
+    background-color: #00bcd4;
+    box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
+}
+
+.box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 188, 212, 0.5);
+}
 
 
+@keyframes slideright {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
 
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideleft {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidetop {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slidebottom {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
 /* Contact section styles */
 .contact {
     display: flex;
@@ -257,266 +512,6 @@ body {
 
     to {
         transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-
-/*about content start*/
-.about {
-    display: flex;
-    align-items: center;
-    padding: 50px;
-    background: rgb(25, 25, 58);
-    flex-wrap: wrap;
-}
-
-.about-img {
-    flex: 1;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.about-img img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    border: 5px solid cyan;
-}
-
-.about-text {
-    flex: 1;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.about-content {
-    font-size: 25px;
-    text-align: center;
-}
-
-.btn {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: cyan;
-    border-radius: 40px;
-    font-size: 20px;
-    color: black;
-    letter-spacing: 1px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: .3s;
-}
-
-.btn:hover {
-    box-shadow: 0 0 5px cyan, 0 0 25px cyan, 0 0 50px cyan, 0 0 100px cyan, 0 0 200px cyan;
-}
-
-.about-text h2 {
-    font-size: 60px;
-    text-align: center;
-}
-
-.about-text h2 span {
-    color: cyan;
-}
-
-/*about end*/
-
-@media (max-width: 768px) {
-    .about {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .about-text {
-        padding-bottom: 2rem;
-    }
-
-    .btn {
-        margin-right: 0;
-    }
-}
-
-/*skills content start*/
-
-.skills {
-    padding: 50px 0;
-    text-align: center;
-}
-
-.skills-title {
-    font-size: 36px;
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-.skills-title h2 {
-    font-size: 60px;
-}
-
-.skills-title h2 span {
-    color: cyan;
-}
-
-.container1 {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.technical-bars {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-}
-
-.bar {
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-.bar i {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-.bar .info {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 10px;
-}
-
-.bar .description {
-    font-size: 14px;
-    color: #666;
-}
-
-/*skills end*/
-
-.services-text {
-    text-align: center;
-}
-
-.services-text h2 {
-    font-size: 60px;
-}
-
-.services-text h2 span {
-    color: cyan;
-}
-
-.box-container {
-    display: flex;
-    justify-content: center;
-    gap: 50px;
-}
-
-/* Box Container and Flexbox Styles */
-.box-container {
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    flex-wrap: wrap;
-    padding: 20px;
-}
-
-.box {
-    width: 300px;
-    padding: 20px;
-    background-color: #1a1939;
-    color: white;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    text-align: center;
-}
-
-.box h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.box p {
-    font-size: 16px;
-    color: #cccccc;
-    margin-bottom: 20px;
-}
-
-.box .button {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-}
-
-.box .button button {
-    padding: 10px 20px;
-    background-color: cyan;
-    color: black;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
-}
-
-.box .button button:hover {
-    background-color: #00bcd4;
-    box-shadow: 0 0 10px rgba(0, 188, 212, 0.7);
-}
-
-.box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 10px 20px rgba(0, 188, 212, 0.5);
-}
-
-@keyframes slideright {
-    from {
-        transform: translateX(-100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slideleft {
-    from {
-        transform: translateX(100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slidetop {
-    from {
-        transform: translateY(100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
-        opacity: 1;
-    }
-}
-
-@keyframes slidebottom {
-    from {
-        transform: translateY(-100px);
-        opacity: 0;
-    }
-
-    to {
-        transform: translateY(0);
         opacity: 1;
     }
 }
